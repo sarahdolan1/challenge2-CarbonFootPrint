@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Challenge 2 </title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- style css -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <link rel="stylesheet" href="css/surplus.css">
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="card rounded-big border-0 bg-secondary">
+                <div class="card-body p-5">
+                    <h1 class="title bg-body text-center p-3">
+                        Challenge 2
+                    </h1>
+
+                    <a href="i2.html" class="arrow">
+                        <i class="fa fa-arrow-left fa-2x"></i>
+                    </a>
+
+
+
+
+
+
+
+                    <div class="cardbon mt-4">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card h-100 border-0">
+                                    <div class="card-header bg-body">
+                                        <h2 class="text-center">
+                                            Carbon Footprint
+                                        </h2>
+                                    </div>
+
+                                    <div class="card-body bg-f7 d-flex justify-content-center align-items-center">
+                                        <img src="img/footprint.jpg" id="footprint-img" class="img-fluid d-block m-auto" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <!---------------------------------------------------------------------------------------------------------------------- -->
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card border-0">
+                                            <div class="card-body bg-secondary">
+                                                <h3>Yearly Carbon Footprint</h3>
+                                            </div>
+                                            <div class="card-body bg-white big-border">
+                                                <h4 class="fw-bold text-center mb-0" id="total2">
+                                                    <span id="total-available2">61000000</span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card border-0 ">
+                                            <div class="card-body bg-secondary d-flex justify-content-between align-items-center">
+                                                <h3>Cost</h3>
+                                                <i class="fa fa-info-circle fa-2x"></i>
+                                            </div>
+                                            <div class="card-body bg-white big-border">
+                                                <h4 class="fw-bold text-center mb-0" id="cost2">
+                                                    <span id="total-cost2">0</span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card border-0 mt-4">
+                                    <div class="card-body bg-white big-border">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="left d-flex justify-content-start align-items-center">
+                                                <h4>Solar Panels: </h4>
+                                                <span class="margin-l-16 bold text-l" id="solar2"></span>
+                                            </div>
+
+                                            <a href="c2solar.html">
+                                                <button class="button-33" role="button"> Click Here </button>
+                                            </a>
+                                        </div>
+
+
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="left d-flex justify-content-start align-items-center">
+                                                <h4>Wind Turbines</h4>
+                                                <span class="margin-l-16 bold text-l" id="wind2"></span>
+                                            </div>
+
+                                            <a href="c2wind.html">
+                                                <button class="button-33" role="button"> Click Here </button>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="left d-flex justify-content-start align-items-center">
+                                                <h4>Micro Hydropower</h4>
+                                                <span class="margin-l-16 bold text-l" id="hydro2"></span>
+                                            </div>
+
+                                            <a href="c2hydro.html">
+                                                <button class="button-33" role="button"> Click Here </button>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="left d-flex justify-content-start align-items-center">
+                                                <h4>Nuclear Power</h4>
+                                                <span class="margin-l-16 bold text-l" id="nuclear2"></span>
+
+                                            </div>
+
+                                            <a href="c2nuclear.html">
+                                                <button class="button-33" role="button"> Click Here </button>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="left d-flex justify-content-start align-items-center">
+                                                <h4>Tree Planting </h4>
+                                                <span class="margin-l-16 bold text-l" id="tree2"></span>
+                                            </div>
+
+                                            <a href="c2tree.html">
+                                                <button class="button-33" role="button"> Click Here </button>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br> <br>
+                    <br> <br>
+                    <br> <br>
+                    <br> <br>
+
+                    <!--  <button id="budgetButton">Budget1 </button>
+
+                    <span id="showBudget"> </span>
+                    <button onclick="clickbudgetbutton()">Budget </button>
+-->
+
+
+                    <button class="button-34" onclick="showBudget()" role="button">Budget ➨ </button>
+
+                    <div id="myDIV">
+
+                        <div class="card-header bg-body">
+                            <h2 class="text-center">
+                                Budget
+                            </h2>
+                        </div>
+
+                        <canvas id="myChart" style="width:100%;max-width:600px;background-color: white; justify-content: center; align-items: center" ;></canvas>
+                        <canvas id="myChart2" style="width:100%;max-width:600px;background-color: white; justify-content: center; align-items: center" ;></canvas>
+                        <script>
+                            var xValues = ["Social Protection", "Health", "Housing", "Education", "Transport", "Justice", "Debt Servicing, EU payment", "other", "Surplus"];
+                            var yValues = [23.9, 24.0, 6.4, 10, 3.5, 3.4, 13.6, 18.6, 5];
+                            var barColors = ["red", "green", "blue", "orange", "brown", "purple", "pink", "yellow"];
+
+                            var mychart = new Chart("myChart", {
+                                type: "bar",
+                                data: {
+                                    labels: xValues,
+                                    datasets: [{
+                                        backgroundColor: barColors,
+                                        data: yValues
+                                    }]
+                                },
+                                options: {
+                                    legend: {
+                                        display: false
+                                    },
+                                    title: {
+                                        display: true,
+                                        text: "2022 Total Expenditure : €103.5 billion "
+                                    }
+                                }
+                            });
+                        </script>
+                        <script>
+                            var xValues = ["Service of National Debt", "EU Budget Contribution", "Other Von Voted Expenditure"];
+                            var yValues = [3.91, 3.98, 5.71];
+                            var barColors = ["red", "green", "blue"];
+
+                            new Chart("myChart2", {
+                                type: "pie",
+                                data: {
+                                    labels: xValues,
+                                    datasets: [{
+                                        backgroundColor: barColors,
+                                        data: yValues
+                                    }]
+                                },
+                                options: {
+                                    legend: {
+                                        display: true
+                                    },
+                                    title: {
+                                        display: true,
+                                        text: "Debt servicing, Eu payments drill down "
+                                    }
+                                }
+                            });
+                        </script>
+                        <br>
+                        <br>
+                        <div class="card-body bg-white big-border">
+
+                            <h4 class="fw-bold text-center mb-0">
+
+                                <span>The current budget has a surplus of 5 Billion,<br> please choose if you want to increase this budget ?</span>
+                            </h4>
+                        </div>
+                        <div class="money">
+                            <h4 class="fw-bold text-center mb-0">
+                                Borrow? <button class="button-33" role="button" onclick="borrowHandeler()"> yes </button>
+                                <br> Increase Tax? <button class="button-33" role="button" onclick="taxHandeler()"> yes </button>
+                                <br>
+                                <p> Realloate Funds: </p>
+                                Socical Protection <button class="button-33" role="button" onclick="ReallocatesocialProtectionHandeler()"> yes </button>
+                                <br> Housing <button class="button-33" role="button" onclick="ReallocateHousing()"> yes </button>
+                                <br> Education <button class="button-33" role="button" onclick="ReallocateEducationHandeler()"> yes </button>
+                                <br> Health <button class="button-33" role="button" onclick="ReallocatesocialProtectionHandeler()"> yes </button>
+                                <br> Justice <button class="button-33" role="button" onclick="ReacclocateTransport()"> yes </button>
+                                <br> Transport <button class="button-33" role="button" onclick="ReacclocateTransport()"> yes </button>
+                            </h4>
+                        </div>
+
+
+
+
+                        <div class="col-md-4">
+                            <div class="card border-0">
+                                <div class="card-body bg-secondary">
+                                    <h3>Yearly Carbon Budget</h3>
+                                </div>
+                                <div class="card-body bg-white big-border">
+                                    <h4 class="fw-bold text-center mb-0" id="yearBudget">
+                                        <span id="year-budget">5000000000</span> euros
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <div class="card border-0 ">
+                                <div class="card-body bg-secondary d-flex justify-content-between align-items-center">
+                                    <h3>2023 Predicted Carbon footprint Reduction </h3>
+                                </div>
+                                <div class="card-body bg-white big-border">
+                                    <h4 class="fw-bold text-center mb-0" id="carRed">
+                                        <span id="car-red">0</span> tonnes
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--<button onclick="finYear1()">Finished</button>-->
+                        <button class="button-34" onclick="finYear1()" role="button">Check </button>
+
+                        <div class="containerdots">
+                            <input type="radio" class="radio" name="progress" value="one" id="one" checked>
+                            <label for="one" class="label"> 2023 </label>
+
+                            <input type="radio" class="radio" name="progress" value="two" id="two">
+
+                            <label for="two" class="label">2024</label>
+                            <input type="radio" class="radio" name="progress" value="three" id="three">
+                            <label for="three" class="label">2025</label>
+                            <input type="radio" class="radio" name="progress" value="four" id="four">
+                            <label for="four" class="label">2026</label>
+                            <input type="radio" class="radio" name="progress" value="five" id="five">
+                            <label for="five" class="label">2027</label>
+                            <input type="radio" class="radio" name="progress" value="six" id="six">
+                            <label for="six" class="label">2028 </label>
+                            <input type="radio" class="radio" name="progress" value="seven" id="seven">
+                            <label for="seven" class="label">2029</label>
+                            <input type="radio" class="radio" name="progress" value="eight" id="eight">
+                            <label for="eight" class="label">2030 </label>
+
+
+
+                            <div class="progress">
+
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <script>
+                        var x = document.getElementById("myDIV");
+                        x.style.display = "none";
+
+                        function showBudget() {
+
+
+
+                            if (x.style.display === "block") {
+                                x.style.display = "none";
+                            } else {
+                                x.style.display = "block";
+                            }
+
+
+                        }
+                    </script>
+                    <br> <br>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- app js -->
+    <script src="js/surplus.js"></script>
+</body>
+
+</html>
