@@ -19,7 +19,7 @@ NumSolarPannels2.onblur = function() {
         setData("solar2", { cost2: allCostField2.value, solar2: parseInt(carbonSaved2.value) + previousValue });
         // getData("solar")['cost'];
     } else {
-        alert('there is not enough houses for that amount of solar pannels ')
+        alert('There is not enough houses for that amount of solar pannels ')
 
     }
 };

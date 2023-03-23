@@ -23,7 +23,7 @@ NumNuclear2.onblur = function() {
         setData("nuclear2", { cost2: allCostField2.value, nuclear2: parseInt(carbonSaved2.value) + previousValue, year: targetYear });
     } else {
         console.log('bug' + NumNuclear2.value)
-        alert('you are not allowed that many ')
+        alert('You are not allowed to buy that many nuclear power stations ')
 
     }
 

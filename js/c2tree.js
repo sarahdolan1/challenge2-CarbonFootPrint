@@ -23,7 +23,7 @@ NumTree2.onblur = function() {
         //add data to memory
         setData("tree2", { cost2: allCostField2.value, tree2: parseInt(carbonSaved2.value) + previousValue, year: targetYear });
     } else {
-        alert('you do not have enough space for that amount of trees  ')
+        alert('There is not enough space for that amount of trees  ')
 
     }
 

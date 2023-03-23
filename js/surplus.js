@@ -608,7 +608,7 @@ let totalInterest = 0;
 let yearBudget = document.querySelector('#year-budget');
 
 function borrowHandeler() {
-    borrow = prompt("Enter an amount to borrow");
+    borrow = prompt("Enter an amount to borrow from the EU: ");
     setData('borrow', borrow);
     yearBudget.innerText = Number(yearBudget.innerText) + Number(getData('borrow'));
 
@@ -629,7 +629,7 @@ if (getData('borrow')) {
 let tax;
 
 function taxHandeler() {
-    tax = prompt("Enter a percentage to increase taxes");
+    tax = prompt("Enter a percentage to increase taxes by");
     setData('tax', tax);
     // yearBudget.innerText = Number(yearBudget.innerText) + (Number(getData('tax')['amount']) / 100) * Number(yearBudget.innerText)
     yearBudget.innerText = Number(yearBudget.innerText) + (Number(getData('tax')) / 100) * 93000000000
