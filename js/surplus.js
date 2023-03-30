@@ -36,7 +36,7 @@ if (!getData('currentYear')) {
     setData("nuclear2", { nuclear2: 0, year: 9 });
     setData("hydro2", { hydro2: 0, year: 9 });
     setData("tree2", { tree2: 0, year: 9 });
-    setData("borrow", 0);
+
 
 
 
@@ -52,7 +52,6 @@ function updateTotal(num) {
 }
 
 let year = 1;
-
 
 document.getElementById("one").addEventListener("click", function(e) {
     year = 1
@@ -609,7 +608,10 @@ let yearBudget = document.querySelector('#year-budget');
 
 function borrowHandeler() {
     borrow = prompt("Enter an amount to borrow from the EU: ");
+    let borrow1 = Number(getData('borrow1'));
     setData('borrow', borrow);
+    borrow1 += Number(borrow);
+    setData('borrow1', borrow1);
     yearBudget.innerText = Number(yearBudget.innerText) + Number(getData('borrow'));
 
 
@@ -624,6 +626,7 @@ if (getData('borrow')) {
         yearBudget.innerText = Number(yearBudget.innerText) + Number(getData('borrow'));
     }
 }
+
 
 
 let tax;
@@ -708,15 +711,15 @@ reducer();
 
 function calculateBorrow(year) {
     if (year > 1) {
-        if (getData('borrow')) {
-            if (getData('borrow')['amount']) {
-                //     let interest = ((borrowInterest / 100) * Number(getData('borrow')['amount'])) * year;
-                let interest = ((borrowInterest / 100) * Number(getData('borrow')['amount']));
+        let interest = ((borrowInterest / 100) * Number(getData('borrow1')));
 
-                totalInterest += interest;
-                yearBudget.innerText = Number(yearBudget.innerText) - interest;
-            }
-        }
+        totalInterest = getData('totalInterest');
+        totalInterest += interest;
+
+        setData('totalInterest', totalInterest);
+        setData("borrow", 0);
+
+        yearBudget.innerText = Number(yearBudget.innerText) - totalInterest;
 
     }
 }
@@ -810,15 +813,16 @@ function yearchange(year1, radio) {
     setData("nuclear2", { cost2: 0, nuclear2: getNuclear.nuclear2, year: getNuclear.year });
     setData("tree2", { cost2: 0, tree2: getTree.tree2, year: getTree.year });
     setData("hydro2", { cost2: 0, hydro2: getHydro.hydro2, year: getHydro.year });
-    setData("borrow", 0);
+
     yearBudget.innerText = 5000000000;
     totalCostField2.innerHTML = 0;
-    interest = 0;
+    //interest = 0;
     tax = 0;
     console.log('year change')
     console.log(year, year1)
-        // addWind();
-        // addWindCost();
+    console.log('total interest', totalInterest);
+    // addWind();
+    // addWindCost();
 
     // addHydro();
     // addHydroCost();
@@ -829,8 +833,8 @@ function yearchange(year1, radio) {
     //addNuclear();
     //addNuclearCost();
 
-    calculateBorrow(year1)
-    calculateTax(year1)
+    calculateBorrow(year)
+    calculateTax(year)
 
     //updateChart();
 
@@ -847,3 +851,19 @@ function yearchange(year1, radio) {
 
 
 }
+
+if (getData('currentYear') == 1) {
+
+    setData("borrow", 0);
+    setData("borrow1", 0);
+    console.log('hfdghfghsgfhghdgfh');
+    setData("totalInterest", 0);
+}
+
+let interest = ((borrowInterest / 100) * Number(getData('borrow1')));
+
+totalInterest = getData('totalInterest');
+totalInterest += interest;
+
+
+yearBudget.innerText = Number(yearBudget.innerText) - totalInterest;
